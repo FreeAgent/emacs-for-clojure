@@ -1,8 +1,11 @@
-# Minor additions to init.el in this fork
+# Additions to init.el in this fork
 
    * rainbow-delimiters ; rainbow colours for rounded brackets in Clojure/Lisp
    * evil               ; Vim editing-keys in Emacs
    * elixir-mode        ; a mode for @josevalim's Elixir language
+   * coffee-mode        ; a mode for CoffeeScript
+   * js2-mode           ; a mode for JavaScript
+   * pony-mode          ; a mode for Django (the premier web-framework for Python)
    
 Also:
    * column-number-mode ; minor-mode to show the column number on mode-line.

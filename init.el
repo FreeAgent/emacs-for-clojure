@@ -20,7 +20,11 @@
                       ac-nrepl
                       rainbow-delimiters
                       evil
-                      elixir-mode)
+                      elixir-mode
+                      js2-mode
+                      coffee-mode
+                      pony-mode
+                      )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -30,14 +34,16 @@
 (load "~/.emacs.d/user.el")
 
 ; Evil mode
-(add-to-list 'load-path "~/.emacs.d/evil") (require 'evil) (evil-mode 1)
+(require 'evil)
+(evil-mode 1)
 
 (column-number-mode)  ; display the column numbers on the mode-line
 
-; Rainbow delimiters for bracks (in Clojure, Emacs Lisp, etc.)
-(require 'rainbow-delimiters) (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+; Rainbow delimiters for brackets (in Clojure, Emacs Lisp, etc.)
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-; recent files
+; reopen recent files
 (require 'recentf)
 (recentf-mode 1)
 (global-set-key "\C-xf" 'recentf-open-files)
@@ -47,16 +53,17 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
 
+(require 'elixir-mode)  ; for the Elixir language (on the Erlang VM)
+
+(require 'coffee-mode)  ; for CoffeeScript
+
+(require 'pony-mode)    ; Django pony-mode 
+
 
 ; make long lines wrap according to the window-size
 ; (setq longlines-wrap-follows-window-size t)
 ; bind C-M-l to "longlines-mode"
 ;(global-set-key [(control meta l)] 'longlines-mode)
-
-
-; Elixir
-(add-to-list 'load-path "~/.emacs.d/emacs-elixir") 
-(require 'elixir-mode)
 
 
 ; enable visual-line-mode in all buffers
