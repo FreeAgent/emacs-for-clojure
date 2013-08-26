@@ -1,3 +1,15 @@
+# Minor additions to init.el in this fork
+
+   * rainbow-delimiters ; rainbow colours for rounded brackets in Clojure/Lisp
+   * evil               ; Vim editing-keys in Emacs
+   * elixir-mode        ; a mode for @josevalim's Elixir language
+   
+Also:
+   * column-number-mode ; minor-mode to show the column number on mode-line.
+   * C-x f              ; to reopen a recently opened file.
+   * uniquify           ; show a partial path to a file in the buffer. 
+
+   
 # Emacs for Clojure Starter Kit
 
 This repo is a minor extension of [The Emacs Starter Kit, v2](https://github.com/technomancy/emacs-starter-kit/tree/v2). Added functionality:
