@@ -24,6 +24,7 @@
                       js2-mode
                       coffee-mode
                       pony-mode
+                      projectile
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -57,8 +58,11 @@
 
 (require 'coffee-mode)  ; for CoffeeScript
 
-(require 'pony-mode)    ; Django pony-mode 
+(require 'pony-mode)    ; Django pony-mode
 
+; Projectile mode 
+(require 'projectile)   
+(projectile-global-mode)
 
 ; make long lines wrap according to the window-size
 ; (setq longlines-wrap-follows-window-size t)

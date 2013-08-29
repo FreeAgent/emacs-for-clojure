@@ -11,7 +11,7 @@
 ;; (in lines high) Emacs will have whenever you start it
 
 ;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 20) (height . 20)))
-
+(set-face-attribute 'default nil :height 120)
 
 ;; Place downloaded elisp files in this directory. You'll then be able
 ;; to load them.
