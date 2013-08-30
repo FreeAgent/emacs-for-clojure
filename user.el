@@ -11,7 +11,6 @@
 ;; (in lines high) Emacs will have whenever you start it
 
 ;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 20) (height . 20)))
-(set-face-attribute 'default nil :height 120)
 
 ;; Place downloaded elisp files in this directory. You'll then be able
 ;; to load them.
@@ -34,7 +33,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
 ;; Uncomment this to increase font size
-;; (set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 140)
 (load-theme 'tomorrow-night-bright t)
 
 ;; Flyspell often slows down editing so it's turned off
