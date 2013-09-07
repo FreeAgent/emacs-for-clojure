@@ -7,6 +7,7 @@
    * js2-mode           ; a mode for JavaScript
    * pony-mode          ; a mode for Django (Python's leading web-framework)
    * projectile         ; a mode for navigating through a project
+   * markdown-mode      ; a mode for editing web-pages in Markdown format
    
 Also:
    * column-number-mode ; minor-mode to show the column number on mode-line.

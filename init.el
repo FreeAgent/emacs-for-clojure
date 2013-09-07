@@ -25,6 +25,7 @@
                       coffee-mode
                       pony-mode
                       projectile
+                      markdown-mode
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -63,6 +64,14 @@
 ; Projectile mode 
 (require 'projectile)   
 (projectile-global-mode)
+
+; Markdown mode 
+(autoload 'markdown-mode "markdown-mode"
+             "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
 
 ; make long lines wrap according to the window-size
 ; (setq longlines-wrap-follows-window-size t)
