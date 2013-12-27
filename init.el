@@ -35,6 +35,9 @@
 
 (load "~/.emacs.d/user.el")
 
+; support for ClojureScript
+(add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
+
 ; Evil mode
 (require 'evil)
 (evil-mode 1)
