@@ -35,6 +35,9 @@
 
 (load "~/.emacs.d/user.el")
 
+; turn off paredit mode
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode nil)))
+
 ; support for ClojureScript
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 
