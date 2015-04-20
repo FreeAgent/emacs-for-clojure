@@ -3,6 +3,8 @@
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives
+                 '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -15,7 +17,6 @@
                       starter-kit-ruby
                       clojure-mode
                       clojure-test-mode
-                      nrepl
                       auto-complete
                       ac-nrepl
                       rainbow-delimiters
@@ -26,6 +27,7 @@
                       pony-mode
                       projectile
                       markdown-mode
+		      motion-mode
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -40,6 +42,21 @@
 
 ; support for ClojureScript
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
+
+; Dirtree
+; (require 'tree-mode)
+; (require 'windata)
+; (require 'dirtree)
+; (autoload 'dirtree "dirtree" "Add directory to tree view" t)
+; (global-set-key "\C-o" 'dirtree-show)
+
+; supposed to make Fn key the Meta key on a Mac, but not working for me...
+;(setq mac-function-modifier 'meta)
+
+; Neotree --problem unfolding directories in Neotree sidebar
+; (require 'neotree)
+; (neotree-show)
+; (global-set-key "\C-o" 'neotree-toggle)
 
 ; Evil mode
 (require 'evil)
